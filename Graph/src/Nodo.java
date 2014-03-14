@@ -1,9 +1,10 @@
 
 public class Nodo implements INodo {
 
-	@Override
-	public void nextNode(int[] loc, int target) {
-		
+	int id;
+	
+	public Nodo(int id) {
+		this.id = id;
 	}
 
 	@Override
