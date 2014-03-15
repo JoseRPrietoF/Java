@@ -107,7 +107,7 @@ public class Grafo {
 	}
 
 
-	// Algoritmo que, dependiendo del punto inicial, rellena un 
+	// Algoritmo que, dependiendo del punto inicial (origen), rellena arrays con caminos mas cortos
 	void dijkstra(int inicial) {
 		init(); // inicializamos nuestros arreglos
 		Q.add(new Node(inicial, 0)); // Insertamos el vértice inicial en la Cola de Prioridad
@@ -132,13 +132,11 @@ public class Grafo {
 			}
 		}
 
-		System.out.printf("Distancias mas cortas iniciando en vertice %d\n", inicial);
+		System.out.printf("\n Caminos mas cortos desde nodo %d \n", inicial);
 		for (int i = 1; i <= nVertices; ++i) {
-			System.out.printf("Vertice %d , distancia mas corta = %d\n", i, distanciaTotal[i]);
+			System.out.printf("Nodo %d , distancia mas corta = %d kms\n", i, distanciaTotal[i]);
 		}
-
-		System.out.println("\n**************Impresion de camino mas corto**************");
-		System.out.printf("Ingrese vertice destino: ");
+		System.out.printf("Dame un destino: ");
 		int destino;
 		destino = sc.nextInt();
 		buscar(destino);
